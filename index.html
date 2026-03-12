@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee8c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Epilogue', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 group" href="#">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">coffee</span>
+</div>
+<h2 class="text-slate-900 text-xl font-bold tracking-tight">Coffee Văn Dũng</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 hover:text-primary text-sm font-semibold transition-colors" href="#">Trang chủ</a>
+<a class="text-slate-700 hover:text-primary text-sm font-semibold transition-colors" href="#menu">Thực đơn</a>
+<a class="text-slate-700 hover:text-primary text-sm font-semibold transition-colors" href="#story">Câu chuyện</a>
+<a class="text-slate-700 hover:text-primary text-sm font-semibold transition-colors" href="#contact">Liên hệ</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-primary/5 rounded-full px-4 py-2 border border-primary/10">
+<span class="material-symbols-outlined text-slate-400 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-slate-400" placeholder="Tìm kiếm đồ uống..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="px-6 lg:px-20 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="relative min-h-[520px] rounded-3xl overflow-hidden flex items-center p-8 lg:p-16">
+<div class="absolute inset-0 z-0">
+<img alt="Hot coffee pouring into a cup" class="w-full h-full object-cover" data-alt="Hot steaming coffee pouring into a ceramic cup on wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCjAUluTA7ZzAZ-q4HojMKgdBFe_W8p26ACK-KvnHear_c6TCNVRbiGc3Q6KoTzqQAtYUk7jPeoStF8Phh9nIFiebCdj7SJZPDieTsMx2uuD7ZAP6oRZYA9Gl6VcnlPlASvmhs5bQdt2hjWvt_gQTjkTihwskk55LoRmfKT0aLBQEYRX3DC-h3BO3cfwDpBhU_7DxwRlLNDiutwtMMrYLQdoh0lmdf4h-R_nzVJSWG7XSvX9E0NT1DStk4eVPLrBVxo2RU0efuTqc5"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block px-4 py-1.5 bg-primary/20 backdrop-blur-md border border-primary/30 text-primary font-bold text-xs uppercase tracking-widest rounded-full mb-6">
+                            Chào mừng đến với Văn Dũng
+                        </span>
+<h1 class="text-white text-5xl lg:text-7xl font-black leading-tight mb-6">
+                            Khởi đầu ngày mới <br/><span class="text-primary">đầy cảm hứng</span>
+</h1>
+<p class="text-slate-200 text-lg lg:text-xl font-normal leading-relaxed mb-10 max-w-lg">
+                            Thưởng thức hương vị cà phê rang xay nguyên bản trong không gian ấm cúng và tinh tế. Từng giọt cà phê là một câu chuyện tâm huyết.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-base transition-all flex items-center gap-2">
+                                Đặt hàng ngay <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-base transition-all">
+                                Xem thực đơn
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-6 lg:px-20 py-16 bg-white" id="menu">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-slate-900 text-3xl font-bold mb-2">Thực đơn đặc sắc</h2>
+<p class="text-slate-500 max-w-md">Những món quà từ hạt cà phê và lá trà được chọn lọc kỹ lưỡng dành riêng cho bạn.</p>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2">
+<button class="bg-primary text-white px-6 py-2 rounded-full font-semibold whitespace-nowrap">Tất cả</button>
+<button class="bg-primary/5 text-slate-700 px-6 py-2 rounded-full font-semibold whitespace-nowrap hover:bg-primary/10 transition-colors">Cà phê</button>
+<button class="bg-primary/5 text-slate-700 px-6 py-2 rounded-full font-semibold whitespace-nowrap hover:bg-primary/10 transition-colors">Trà trái cây</button>
+<button class="bg-primary/5 text-slate-700 px-6 py-2 rounded-full font-semibold whitespace-nowrap hover:bg-primary/10 transition-colors">Bánh ngọt</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4">
+<img alt="Coffee cup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Beautifully crafted latte with heart shape foam art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtTOdoqp97Qh7BmiI8g_4_zU6BtcSxW5kNtYx6Jbc00GLjoThLOG7Nsh4utgC6mvBUJ0yYuD3fqTImydf1ACT1mDKIZLDs8tcgJTD-W7p9sShZIHSdjMtqpbej5LWablZuTBhNX7j5zFDmnQKnmChXMnnxalpteI2AIBkjswgG4iwZ9ChZqILs38nkl04IWtsHf90jO26JZD3ceBsnGOksRUZzeNe5SYoCpeyjSldymraxI_TbOrg4N5zfDt4cobqL1m5-5Vm96Y2l"/>
+<button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-slate-900 font-bold text-lg">Cà phê Pha Máy</h3>
+<p class="text-slate-500 text-sm mb-2 line-clamp-2">Hương vị đậm đà từ hạt Robusta &amp; Arabica cao cấp rang mộc.</p>
+<p class="text-primary font-bold">45.000đ</p>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4">
+<img alt="Fruit Tea" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Refreshing iced peach fruit tea with slices of fruit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQGC5SW_WhOxANA39FuaugNnYO7SRDyR9IDNUZHHFfYhZSyTlEy90Myy_ko-zurAPAi3v-PGbSTbiiCI534mrHGzVZYDGnSvE8EsOIt0WacELMxP3Fw6oKYdl94LWzaCL9aY2SA1g1TxvgD8ETE5JIovRI7z7iBi9MNU3Cyex54HNQLg3PlIMpKu7ENF2QntbIoVPHNe1PvJ9De6-zmOGOLZt5LEsbr2yVx4leaF5wW0NtC3C7p0Q_tvap0H7ISNYd8xE-3PLa9zr1"/>
+<button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-slate-900 font-bold text-lg">Trà Đào Cam Sả</h3>
+<p class="text-slate-500 text-sm mb-2 line-clamp-2">Thanh mát từ trà ô long kết hợp cùng đào miếng và hương sả.</p>
+<p class="text-primary font-bold">55.000đ</p>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4">
+<img alt="Coffee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Drip coffee preparation process into a glass carafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfpn8eI2G5RBdkY4zuzjjx5VMEHV14XJSxR1LBFW7pM2UwAbeTbiKYRmuLJL2ITmOw2aSgxo5Q9n4MGZ7ILQjO9cySC84hSu_GyyqSmmeKIoXfk-nXzsn5I5vtToHeZ1cF1XIy0xdco_1Uf92_9DSOf40AXB3HIsB_dk5mned7s0E3nx4OLzICee6JWwgkfXhHGuNrEFf9p_bVOWn3_N0FNX_9qZGdSQB4lTWWx4M1F8F53bD8AG2iNzFhEzLWiK9JOk63Rt06bJG0"/>
+<button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-slate-900 font-bold text-lg">Cà Phê Muối</h3>
+<p class="text-slate-500 text-sm mb-2 line-clamp-2">Sự kết hợp hoàn hảo giữa vị đắng của cà phê và kem muối béo ngậy.</p>
+<p class="text-primary font-bold">49.000đ</p>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square overflow-hidden rounded-2xl mb-4">
+<img alt="Cake" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Decadent chocolate brownie with a dusting of cocoa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRTDTpTfLbLNbrVVRJdUw2nMPvHqNxp21aUp2tURUzn5kLandM2ACv-v7QHOcUK52hto3a4BCZTzD9utKRKTSPIMkFZ9IYfwFUvKnFSHm3y3o7I_-nAntPEgaEqJgpViXLGp4hWjh1k-ZSUgxZ6aRLNWfyL6aedgMTVXxv_WeXVM-kQbDaOs41jGPGnQTQVUEgxIX872jcpGs3q6cKfSnGrmXBmHUbJKaXbCy4NlvBgwXsZyHP12D_xSHI_IyqdPMTsMprUWWf0Lq1"/>
+<button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-slate-900 font-bold text-lg">Bánh Brownie Chocolate</h3>
+<p class="text-slate-500 text-sm mb-2 line-clamp-2">Bánh ngọt Pháp mềm mịn, đậm vị chocolate cao cấp.</p>
+<p class="text-primary font-bold">39.000đ</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="px-6 lg:px-20 py-20 bg-background-light overflow-hidden" id="story">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="w-full lg:w-1/2 relative">
+<div class="relative z-10 rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
+<img alt="Coffee Roasting" class="w-full h-full object-cover" data-alt="Hands sorting high quality roasted coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqwjyl8KNjI6ymXWP5ucc90pKI_9_E81pAx3KoFP3xBhoL8qut8VXCE5a6YDd0Z3Fh0FrvEtepzR_cvT0lfu44Gvt-hAxEpUuR9snZ3eY8jyKWZ3ayVG6c7E0dvSm6xvBA0vyLovFA0tx1DGJNfInhzuKou8sjpIInTKTXYDnqn6LKTXOLzNyBOzU84rBk3GWF8kw9WWDzV3sqUdyBCyQTTucf424kItbI-KfmU5IcDaaUDtWbxl4IwSipUX6Zzvf_y-V3UTSJIgjH"/>
+</div>
+<div class="absolute -bottom-6 -right-6 z-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -top-10 -left-10 z-20 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+<p class="text-primary font-black text-4xl mb-1">10+</p>
+<p class="text-slate-500 text-sm font-semibold uppercase tracking-wider">Năm kinh nghiệm</p>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="flex items-center gap-3 mb-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="text-primary font-bold text-sm tracking-widest uppercase">Câu chuyện của chúng tôi</span>
+</div>
+<h2 class="text-slate-900 text-4xl lg:text-5xl font-black mb-8 leading-tight">
+                            Hành trình mang hương vị <span class="text-primary">nguyên bản</span> đến bạn
+                        </h2>
+<p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            Khởi nguồn từ niềm đam mê mãnh liệt với những hạt cà phê cao nguyên, Coffee Văn Dũng ra đời với mong muốn mang lại những tách cà phê không chỉ để uống, mà để thưởng thức.
+                        </p>
+<p class="text-slate-600 text-lg leading-relaxed mb-10">
+                            Chúng tôi tin rằng, mỗi tách cà phê là một sự tận tâm. Từ khâu chọn lọc nguyên liệu sạch, kỹ thuật rang xay chuẩn xác đến đôi bàn tay pha chế điêu luyện của các Barista, tất cả tạo nên một trải nghiệm hoàn hảo.
+                        </p>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-xl">verified</span>
+<div>
+<h4 class="font-bold text-slate-900 mb-1">Nguyên liệu sạch</h4>
+<p class="text-sm text-slate-500">100% hạt cà phê chất lượng cao từ Đắk Lắk.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-3 rounded-xl">favorite</span>
+<div>
+<h4 class="font-bold text-slate-900 mb-1">Pha chế tận tâm</h4>
+<p class="text-sm text-slate-500">Mỗi ly nước là một tác phẩm nghệ thuật.</p>
+</div>
+</div>
+</div>
+<button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-xl font-bold transition-all">
+                            Tìm hiểu thêm
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-6 lg:px-20 py-20">
+<div class="max-w-7xl mx-auto bg-primary rounded-[2.5rem] p-10 lg:p-20 relative overflow-hidden">
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] leading-none -mr-20">coffee</span>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-white text-4xl font-black mb-4">Nhận ngay ưu đãi 20% cho lần đầu đặt hàng</h2>
+<p class="text-white/80 text-lg mb-10">Để lại email để nhận mã giảm giá và cập nhật những món mới nhất từ chúng tôi.</p>
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-6 py-4 rounded-xl border-none focus:ring-2 focus:ring-white/50 text-slate-900 placeholder:text-slate-400" placeholder="Địa chỉ email của bạn" type="email"/>
+<button class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition-colors">Đăng ký ngay</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white px-6 lg:px-20 pt-20 pb-10" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 lg:col-span-1">
+<div class="flex items-center gap-2 mb-8">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">coffee</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Coffee Văn Dũng</h2>
+</div>
+<p class="text-slate-400 leading-relaxed mb-6">
+                            Nơi những tâm hồn đồng điệu gặp gỡ bên tách cà phê nồng nàn. Chúng tôi luôn sẵn sàng phục vụ bạn tốt nhất.
+                        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-8 border-l-4 border-primary pl-4">Thực Đơn</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-primary transition-colors" href="#">Cà phê truyền thống</a></li>
+<li><a class="text-slate-400 hover:text-primary transition-colors" href="#">Trà trái cây tươi</a></li>
+<li><a class="text-slate-400 hover:text-primary transition-colors" href="#">Đồ đá xay (Ice Blended)</a></li>
+<li><a class="text-slate-400 hover:text-primary transition-colors" href="#">Bánh ngọt &amp; Snack</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-8 border-l-4 border-primary pl-4">Liên Hệ</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-slate-400">123 Đường Cà Phê, Quận 1, TP. Hồ Chí Minh</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="text-slate-400">0123 456 789</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-slate-400">hello@vandungcoffee.vn</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-8 border-l-4 border-primary pl-4">Giờ Mở Cửa</h4>
+<div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+<div class="flex justify-between items-center mb-4">
+<span class="text-slate-400">Thứ 2 - Thứ 6</span>
+<span class="font-bold text-primary">07:00 - 22:30</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-400">Thứ 7 - CN</span>
+<span class="font-bold text-primary">06:30 - 23:00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-sm">© 2024 Coffee Văn Dũng. All rights reserved.</p>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary" href="#">Chính sách bảo mật</a>
+<a class="hover:text-primary" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
